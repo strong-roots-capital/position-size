@@ -39,5 +39,5 @@ jobs:
         provider: npm
         email: eric.s.crosson@utexas.edu
         on:
-          all_branches: true
-          condition: $TRAVIS_TAG =~ ^v\d.*
+          branch:
+            - /^v\d.*$/
