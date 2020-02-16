@@ -1,6 +1,6 @@
 /**
  * position-size
- * Calculate position size given risk tolerance and distance to stop-loss
+ * Calculate position-size given risk tolerance and distance to stop-loss
  */
 
 import { Either, Left, Right } from 'purify-ts/Either'

@@ -11,7 +11,7 @@
 [Code Coverage]: https://codecov.io/gh/strong-roots-capital/position-size/branch/master/graph/badge.svg
 [Dependencies]: https://david-dm.org/strong-roots-capital/position-size/status.svg
 
-> Calculate position size given risk tolerance and distance to stop-loss
+> Calculate position-size given risk tolerance and distance to stop-loss
 
 ## Install
 

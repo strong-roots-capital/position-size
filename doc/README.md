@@ -26,7 +26,7 @@
 
 Ƭ **Percent**: *number*
 
-Defined in src/position-size.ts:8
+*Defined in [src/position-size.ts:8](https://github.com/strong-roots-capital/position-size/blob/0bbd628/src/position-size.ts#L8)*
 
 ## Variables
 
@@ -34,7 +34,7 @@ Defined in src/position-size.ts:8
 
 • **parseRisk**: *function* = parsePercent(`Risk`, 0, 100)
 
-Defined in src/position-size.ts:32
+*Defined in [src/position-size.ts:32](https://github.com/strong-roots-capital/position-size/blob/0bbd628/src/position-size.ts#L32)*
 
 #### Type declaration:
 
@@ -52,7 +52,7 @@ ___
 
 • **parseStopLoss**: *function* = parsePercent(`Stop-loss`, 0, Infinity)
 
-Defined in src/position-size.ts:33
+*Defined in [src/position-size.ts:33](https://github.com/strong-roots-capital/position-size/blob/0bbd628/src/position-size.ts#L33)*
 
 #### Type declaration:
 
@@ -70,7 +70,7 @@ Name | Type |
 
 ▸ **parseIsNotNaN**(`tag`: string, `value`: number): *Either‹string, number›*
 
-Defined in src/position-size.ts:10
+*Defined in [src/position-size.ts:10](https://github.com/strong-roots-capital/position-size/blob/0bbd628/src/position-size.ts#L10)*
 
 **Parameters:**
 
@@ -87,7 +87,7 @@ ___
 
 ▸ **parsePercent**(`tag`: string, `lowerBoundInclusive`: number, `upperBoundExclusive`: number): *function*
 
-Defined in src/position-size.ts:14
+*Defined in [src/position-size.ts:14](https://github.com/strong-roots-capital/position-size/blob/0bbd628/src/position-size.ts#L14)*
 
 **Parameters:**
 
@@ -113,7 +113,7 @@ ___
 
 ▸ **positionSize**(`capital`: number, `riskAsPercentOfCapital`: number, `percentDistanceToStopLoss`: number): *Either‹string, number›*
 
-Defined in src/position-size.ts:39
+*Defined in [src/position-size.ts:39](https://github.com/strong-roots-capital/position-size/blob/0bbd628/src/position-size.ts#L39)*
 
 Calculate position-size given risk-tolerance and distance to
 stop-loss.
@@ -134,7 +134,7 @@ ___
 
 ▸ **shouldCalculate**(`t`: ExecutionContext, `expected`: Either‹string, number›, `capital`: number, `risk`: number, `stopLoss`: number): *void*
 
-Defined in test/unit/test-position-size.ts:11
+*Defined in [test/unit/test-position-size.ts:11](https://github.com/strong-roots-capital/position-size/blob/0bbd628/test/unit/test-position-size.ts#L11)*
 
 **Parameters:**
 
