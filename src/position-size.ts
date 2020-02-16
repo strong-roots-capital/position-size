@@ -58,7 +58,7 @@ export function positionSize(
     return principal.ap(
         Right(
             (capital: number) =>
-                (capital * risk.unsafeCoerce()) / stop.unsafeCoerce()
+                capital * risk.unsafeCoerce() / stop.unsafeCoerce()
         )
     )
 }
