@@ -14,6 +14,7 @@ stages:
     if: |
       branch = master AND
       type NOT IN (pull_request) AND
+      tag IS present AND
       env(NPM_AUTH_TOKEN) IS present
 
 install:
@@ -24,7 +25,7 @@ jobs:
     - stage: lint
       script: npm run lint
     - stage: deploy
-      before_script:
+      script:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
       deploy:
         skip_cleanup: true
@@ -32,6 +33,7 @@ jobs:
         email: eric.s.crosson@utexas.edu
         on:
           tags: true
+          branch: master
 
 after_success:
   - npm run coverage
