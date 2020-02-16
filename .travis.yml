@@ -22,17 +22,21 @@ install:
 jobs:
   include:
     - stage: lint
-      script: npm run lint
-    - stage: deploy
       script:
+        - npm run lint
+    - stage: test
+      script:
+        - npm test
+      after_success:
+        - npm run coverage
+    - stage: deploy
+      before_script:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
+      script:
+        - npm run prepublishOnly
       deploy:
         skip_cleanup: true
         provider: npm
         email: eric.s.crosson@utexas.edu
         on:
-          tags: true
           branch: master
-
-after_success:
-  - npm run coverage
