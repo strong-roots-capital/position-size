@@ -14,8 +14,7 @@ stages:
     if: |
       env(NPM_AUTH_TOKEN) IS present AND
       type NOT IN (pull_request) AND
-      tag IS present AND
-      tag =~ ^v\d.*
+      tag IS present
 
 install:
   - npm ci
@@ -39,3 +38,5 @@ jobs:
         skip_cleanup: true
         provider: npm
         email: eric.s.crosson@utexas.edu
+        on:
+          condition: $TRAVIS_TAG =~ ^v\d.*
