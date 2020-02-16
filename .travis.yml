@@ -27,12 +27,12 @@ jobs:
     - stage: deploy
       before_script:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
-      script:
-        - npm publish
       deploy:
         skip_cleanup: true
         provider: npm
         email: eric.s.crosson@utexas.edu
+        on:
+          tags: true
 
 after_success:
   - npm run coverage
