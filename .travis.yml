@@ -15,7 +15,7 @@ stages:
       branch = master AND \
       type NOT IN (pull_request) AND \
       tag IS present AND \
-      env(NPM_AUTH_TOKEN) IS present \
+      env(NPM_AUTH_TOKEN) IS present
 
 install:
   - npm ci
