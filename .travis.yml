@@ -14,7 +14,8 @@ stages:
     if: |
       env(NPM_AUTH_TOKEN) IS present AND
       type NOT IN (pull_request) AND
-      tag IS present
+      tag IS present AND
+      tag =~ ^v\d.*
 
 install:
   - npm ci
@@ -33,10 +34,8 @@ jobs:
       before_script:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
       script:
-        - npm run prepublishOnly
+        - skip
       deploy:
         skip_cleanup: true
         provider: npm
         email: eric.s.crosson@utexas.edu
-        on:
-          branch: master
