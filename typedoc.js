@@ -1,6 +1,6 @@
 module.exports = {
     src: [
-        './src/position-size-calculator.ts',
+        './src/position-size.ts',
     ],
     exclude: [
         './node_modules/**/*',
@@ -15,7 +15,7 @@ module.exports = {
     excludeExternals: true,
     excludeNotExported: true,
     readme: 'none',
-    name: 'position-size-calculator',
+    name: 'position-size',
     ignoreCompilerErrors: true,
     plugin: 'typedoc-plugin-markdown',
     listInvalidSymbolLinks: true,

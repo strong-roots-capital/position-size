@@ -1,9 +1,9 @@
 {
-    "name": "position-size-calculator",
+    "name": "position-size",
     "version": "0.0.1",
     "description": "Calculate position size given risk tolerance and distance to stop-loss",
-    "main": "dist/src/position-size-calculator.js",
-    "types": "dist/src/position-size-calculator.d.ts",
+    "main": "dist/src/position-size.js",
+    "types": "dist/src/position-size.d.ts",
     "scripts": {
         "prepublishOnly": "npm run clean && npm run compile",
         "compile": "tsc",
@@ -30,14 +30,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/strong-roots-capital/position-size-calculator.git"
+        "url": "git+https://github.com/strong-roots-capital/position-size.git"
     },
     "author": "Eric Crosson <eric.s.crosson@utexas.edu> (https://github.com/EricCrosson)",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/strong-roots-capital/position-size-calculator/issues"
+        "url": "https://github.com/strong-roots-capital/position-size/issues"
     },
-    "homepage": "https://github.com/strong-roots-capital/position-size-calculator",
+    "homepage": "https://github.com/strong-roots-capital/position-size",
     "devDependencies": {
         "@types/node": "^13.7.1",
         "@typescript-eslint/eslint-plugin": "^2.19.2",
@@ -90,5 +90,8 @@
         "risk",
         "tolerance",
         "stop-loss"
-    ]
+    ],
+    "dependencies": {
+        "purify-ts": "^0.14.1"
+    }
 }
