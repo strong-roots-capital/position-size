@@ -12,9 +12,8 @@ stages:
   - test
   - name: deploy
     if: |
-      branch = master AND \
-      type NOT IN (pull_request) AND \
-      tag IS present AND \
+      branch = master AND
+      type NOT IN (pull_request) AND
       env(NPM_AUTH_TOKEN) IS present
 
 install:
@@ -31,6 +30,8 @@ jobs:
         skip_cleanup: true
         provider: npm
         email: eric.s.crosson@utexas.edu
+        on:
+          tags: true
 
 after_success:
   - npm run coverage
