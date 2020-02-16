@@ -23,7 +23,12 @@ npm install position-size
 
 ```typescript
 import { positionSize } from 'position-size'
-// TODO: describe usage
+
+positionSize(1000, 1, 2.6)
+//=> Right(384.6153846153846
+
+positionSize(1000, 150, 2.6)
+//=> Left('Risk cannot exceed 100 percent')
 ```
 
 ## Documentation
@@ -32,8 +37,4 @@ See [generated documentation](doc/README.md).
 
 ## Related
 
-TODO
-
-## Acknowledgments
-
-TODO
+- [position-size-calculator](https://github.com/strong-roots-capital/position-size-calculator)
