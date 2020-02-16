@@ -1,6 +1,6 @@
 {
     "name": "position-size",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Calculate position size given risk tolerance and distance to stop-loss",
     "main": "dist/src/position-size.js",
     "types": "dist/src/position-size.d.ts",
