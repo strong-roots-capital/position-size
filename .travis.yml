@@ -12,10 +12,9 @@ stages:
   - test
   - name: deploy
     if: |
-      branch = master AND
+      env(NPM_AUTH_TOKEN) IS present AND
       type NOT IN (pull_request) AND
-      tag IS present AND
-      env(NPM_AUTH_TOKEN) IS present
+      tag IS present
 
 install:
   - npm ci
