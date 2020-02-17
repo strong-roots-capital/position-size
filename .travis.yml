@@ -33,10 +33,10 @@ jobs:
       before_script:
         - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
       script:
-        - git describe --exact-tags HEAD
+        - skip
       deploy:
         skip_cleanup: true
         provider: script
         script: npm publish
         on:
-          condition: $(git describe --exact-tags HEAD 2>/dev/null)
+          condition: $(git describe --exact-match HEAD 2>/dev/null)
