@@ -21,6 +21,23 @@ npm install position-size
 
 ## Use
 
+▸ **positionSize**(`capital`: number, `riskAsPercentOfCapital`: number, `percentDistanceToStopLoss`: number): *Either‹string, number›*
+
+*Defined in [src/position-size.ts:39](https://github.com/strong-roots-capital/position-size/blob/0bbd628/src/position-size.ts#L39)*
+
+Calculate position-size given risk-tolerance and distance to
+stop-loss.
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`capital` | number |
+`riskAsPercentOfCapital` | number |
+`percentDistanceToStopLoss` | number |
+
+**Returns:** *Either‹string, number›*
+
 ```typescript
 import { positionSize } from 'position-size'
 
