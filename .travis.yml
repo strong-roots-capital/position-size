@@ -38,7 +38,7 @@ jobs:
         skip_cleanup: true
         provider: npm
         email: eric.s.crosson@utexas.edu
-        api_key: $NPM_AUTH_TOKEN
+        api_key: dummy_api_key
         on:
           all_branches: true
           condition: $TRAVIS_TAG =~ ^v[0-9].*
