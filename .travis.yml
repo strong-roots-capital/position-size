@@ -39,4 +39,4 @@ jobs:
         provider: script
         script: npm publish
         on:
-          condition: git describe --tags HEAD
+          condition: $(git describe --exact-tags HEAD &>/dev/null)
